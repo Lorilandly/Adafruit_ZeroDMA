@@ -502,7 +502,7 @@ DmacDescriptor *Adafruit_ZeroDMA::addDescriptor(void *src, void *dst,
   if (channel >= DMAC_CH_NUM)
     return NULL;
 
-  // Can't do while job's busy
+    // Can't do while job's busy
 #ifdef __SAMD51__
   if (DMAC->Channel[channel].CHSTATUS.reg & DMAC_CHSTATUS_BUSY)
 #else
